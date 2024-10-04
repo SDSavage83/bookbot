@@ -1,18 +1,18 @@
 def main():
     file = "books/frankenstein.txt"
-    file_contents = split_words_into_list(file)
-    count_words(file_contents)
-    print(file_contents)
-    print(count_words(file_contents))
+    output_of_file = output_complete_file(file)
+    wordcount_of_file = count_words(output_of_file)
+    print(output_of_file)
+    print(wordcount_of_file)
 
 def count_words(list):
-    all_the_words = list.split()
-    count_of_words = len(all_the_words)
-    return count_of_words
+    file_as_list = list.split()
+    length_of_list = len(file_as_list)
+    return length_of_list
 
-def split_words_into_list(book):
+def output_complete_file(book):
     with open(book) as f:
-        file_contents = f.read()
-    return file_contents
+        file_output = f.read()
+    return file_output
     
 main()
